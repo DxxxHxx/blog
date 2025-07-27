@@ -53,7 +53,7 @@ export default function CategoryInput({
           onBlur={() => setShowOnBoarding(false)}
           type="text"
           placeholder="카테고리를 입력하세요."
-          className=" dark:text-white placeholder:dark:text-white px-5 py-2 rounded-2xl outline-none my-3"
+          className="px-5 py-2 rounded-2xl outline-none my-3"
           onKeyDown={handleKeyDown}
         />
         <AnimatePresence>

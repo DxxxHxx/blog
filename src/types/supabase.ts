@@ -1,10 +1,15 @@
-export type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[];
+// export type Json =
+//   | string
+//   | number
+//   | boolean
+//   | null
+//   | { [key: string]: Json | undefined }
+//   | Json[];
+
+interface Category {
+  id: number;
+  category: string;
+}
 
 export type Database = {
   // Allows to automatically instanciate createClient with right options
@@ -17,7 +22,7 @@ export type Database = {
     Tables: {
       posts: {
         Row: {
-          category: Json | null;
+          category: Category[] | null;
           content: string | null;
           created_at: string | null;
           id: number;
@@ -25,7 +30,7 @@ export type Database = {
           updated_at: string | null;
         };
         Insert: {
-          category?: Json | null;
+          category?: Category[] | null;
           content?: string | null;
           created_at?: string | null;
           id?: number;
@@ -33,7 +38,7 @@ export type Database = {
           updated_at?: string | null;
         };
         Update: {
-          category?: Json | null;
+          category?: Category[] | null;
           content?: string | null;
           created_at?: string | null;
           id?: number;
