@@ -42,11 +42,11 @@ export const PostList = ({ posts }: { posts: Tables<"posts">[] }) => {
                   </h3>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex flex-wrap gap-2">
-                      {(post.category as { id: number; category: string }[]).map(
-                        (item) => (
-                          <CategoryBadge key={item.id} category={item.category} />
-                        )
-                      )}
+                      {(
+                        post.category as { id: number; category: string }[]
+                      ).map((item) => (
+                        <CategoryBadge key={item.id} category={item.category} />
+                      ))}
                     </div>
                   </div>
                   <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mt-auto">
@@ -75,11 +75,11 @@ export const PostList = ({ posts }: { posts: Tables<"posts">[] }) => {
                       />
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {(post.category as { id: number; category: string }[]).map(
-                        (item) => (
-                          <CategoryBadge key={item.id} category={item.category} />
-                        )
-                      )}
+                      {(
+                        post.category as { id: number; category: string }[]
+                      ).map((item) => (
+                        <CategoryBadge key={item.id} category={item.category} />
+                      ))}
                     </div>
                   </div>
                 </div>
