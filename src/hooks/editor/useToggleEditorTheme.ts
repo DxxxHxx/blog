@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import useThemeStore from "../../store/useThemeStore";
+import { useTheme } from "@/components/common/themeProvider";
 
 const useToggleEditorTheme = () => {
-  const theme = useThemeStore((s) => s.theme);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const $editor = document.querySelector(".toastui-editor-defaultUI");

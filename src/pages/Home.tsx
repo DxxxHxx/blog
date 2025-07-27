@@ -1,5 +1,5 @@
 import Loader from "../components/common/Loader";
-import { PostList } from "../components/home/PostList";
+import PostList from "../components/home/PostList";
 import usePosts from "../hooks/posts/usePosts";
 
 export default function Home() {

@@ -1,19 +1,30 @@
+import { Link, useMatch } from "react-router-dom";
 import { ThemeToggleButton } from "./ThemeToggleButton";
+import clsx from "clsx";
 
-// import { ThemeToggle } from './ThemeToggle'
 export function Header() {
+  const homeMatch = useMatch("/");
   return (
-    <header className="border-b sticky top-0 z-40 bg-background">
+    <header className="border-b sticky top-0 z-40 shadow-md bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
-          <a href="/" className="font-bold text-xl">
+          <Link
+            to="/"
+            className="font-bold text-xl hover:text-primary transition-colors duration-200"
+          >
             My Blog
-          </a>
+          </Link>
         </div>
         <nav className="flex items-center gap-4">
-          <a href="/" className="text-sm font-medium hover:underline">
+          <Link
+            to="/"
+            className={clsx(
+              "text-sm font-medium hover:underline",
+              homeMatch && "text-primary"
+            )}
+          >
             Home
-          </a>
+          </Link>
           <a href="#" className="text-sm font-medium hover:underline">
             About
           </a>
